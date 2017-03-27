@@ -29,3 +29,13 @@ func (s *CalculatorSuite) TestAddFail(c *check.C) {
 	result := s.calculator.Add(42, 10)
 	c.Check(result, check.Equals, 10)
 }
+
+func (s *CalculatorSuite) TestMultiplySuccess(c *check.C) {
+	result := s.calculator.Multiply(2, 3)
+	c.Check(result, check.Equals, 6)
+}
+
+func (s *CalculatorSuite) TestMultiplyFail(c *check.C) {
+	result := s.calculator.Multiply(2, 3)
+	c.Check(result, check.Equals, 7)
+}
